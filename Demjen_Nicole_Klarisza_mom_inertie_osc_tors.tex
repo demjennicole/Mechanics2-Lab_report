@@ -1,0 +1,209 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper, top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{titlesec}
+\usepackage[table]{xcolor}
+\usepackage{makecell}
+\usepackage[romanian]{babel}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\sisetup{
+  output-decimal-marker = {.},
+  group-separator = {},
+}
+
+\graphicspath{{Mec. II/Laboratoare/}}
+\title{Momente de inerție și oscilații de torsiune}
+\author{Demjen Nicole-Klarisza}
+\date{}
+\makeindex
+\begin{document}
+\pagenumbering{gobble}
+\maketitle
+\newpage
+\pagenumbering{arabic}
+\section{Scopul lucrării}
+Prin intermediul acestei lucrări se dorește studierea momentelor de inerție și ale oscilațiilor de torsiune, determinând momentele de reverine respectiv de inerție ale unei axe de torsiune, și analizarea oscilațiilor de torsiune amortizate, prin măsurători ale perioadei și amplitudinii unghiulare ale acestora.
+\section{Introducere teoretică}
+Prin asocierea masei M și vitezei v cu momentul de inerție J și viteza unghiulară $\omega$, mișcarea de translație al unui corp poate fi considerată analoagă cu mișcarea de rotație al acestuia. Expresia cunoscută a energiei cinetice  poate fi rescrisă pentru mișcarea circulară al unui corp știind expresia de legătură între viteza unghiulară $\omega$ și viteza constantă v: $\omega=\frac{v}{r}$, unde r este raza cercului descris de corp, în următorul mod:
+\begin{align}
+E=\frac{1}{2}mv^2 \rightarrow  E=\frac{1}{2}J\omega^2 \text{ ,unde  } J=mr^2
+\end{align}
+și reprezintă momentul de inerție al unui copr punctiform de masă m raportat la axa de rotație. Așadar, se poate spune că momentul de inerție în mișcarea de rotație preia rolul fizic al masei din mișcarea de tranlație. De asemenea, cunoscând expresia forței din principiul doi al lui Newton ($\vec{F}=m\vec{a}=m\dot{\vec{v}}$), se poate constata că direcția forței coincide cu cea a vitezei, adică este tangențială la traiectorie. Tot așa, momentul forței poate fi definit prin următoarea relație:
+\begin{align}
+\vec{M}=\vec{r} \times \vec{F}=J\dot{\vec{\omega}}
+\end{align}
+Se cunoaște ecuația difirențială a unui oscilator ca fiind:
+\begin{align}
+m\ddot{x}+kx=0 \text{ , unde  } k=-\frac{F}{x} 
+\end{align}
+și este constanta resortului. Prin rezolvarea acestei ecuații diferențiale se ajunge la expresia perioadei de oscilație ca fiind T=$2\pi\sqrt{\frac{m}{k}}$. Analog perioadei T,  se regăsește momentul de revenire D al unui oscilator de torsiune, care este descris de relația:
+\begin{align}
+D=-\frac{M}{\Theta} \text{ , unde }
+\end{align}
+$\Theta$ reprezintă deviația unghiulară de la poziția de echilibru. Astfel, prin analogie cu ecuația (3) se poate obține ecuația diferențială care descrie mișcarea unui oscilator de torsiune:
+\begin{align}
+J\ddot{\Theta}+D\Theta=0
+\end{align}
+Soluția acestei ecuații va genera o oscilație armonică de torsiune, a cărei expresie este asemănătoare cu perioadei de oscilație anterioare, și de unde se poate determina cu ușurință expresia momentului de inerție J:
+\begin{align}
+T=2\pi\sqrt{\frac{J}{D}} \rightarrow J=\frac{DT^2}{4\pi^2}
+\end{align}
+\newpage
+
+\section{Aparatură experimentală și mod de lucru}
+Aparatura experimentală pentru această lucrare de laborator este compusă dintr-o axă de torsiune, un dinamometru, un suport de susținere și o tijă metalică de lungime aproximativ egală cu 25cm. Experimentul s-a împărțit în trei părți, care vor fi prezentate e parcursul acestei sectțiuni \newline
+\indent Determinarea momentului de revenire reprezintă prima fază a acestei lucrări de laborator. 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{torsiune_1.jpg}
+    \caption{}
+    \label{fig:l(T2)}
+\end{figure}
+Pentru a determina momentul de revenire, se folosește expresiile (2) și (4), tija fiind rotită cu 180 de grade față de poziția de echilibru, unghiul $\Theta$=$\pi$, iar dinamometrul se atașează în modul descris din figura 1, în orificiul corespunzător unei raze de r=0.1m, cu ajutorul căruia se va măsura forța F necesară pentru menținerea poziției de echilibru. Așadar expresia momentului de revenire este:
+\begin{align}
+D=\frac{Fr}{\pi}
+\end{align}
+\indent În cea de-a doua parte al acestui experiment se va determina momentul de inerție, prin rotirea tijei cu 90 de grade ($\frac{\pi}{2}$), iar apoi eliberarea acestuia și măsurarea timpului în care se efectuează 5 oscilații complete. Expresia prin care se va calcula momentul de inerșie a tijei coincide cu formula (6):
+\begin{align}
+J_t=\frac{DT^2}{4\pi^2}
+\end{align}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{torsiune_2.jpg}
+  \caption{Montajul experimental}
+   \label{fig:l(T2)}
+\end{figure}
+
+După realizarea montajului de mai sus, se montează câte două greutăți în poziții diametral opuse, având grijă ca ele să fie fizate în șanțurile de prindere a tijei. Pentru diferite poziții ale greutăților se efectuează aceași experiment ca cel descris mai sus. Momentul de inerție al unui corp față de axa de rotație aflată la o distanță r se calculează prin relația:
+\begin{align}
+J_c=\frac{J-J_t}{2}
+\end{align}
+\indent În cea de-a treia parte se studiează oscilațiile de torsiune amortizate, prin observarea scăderii amplitudinii în timp a oscilațiilor.
+
+\section{Prelucrarea datelor experimentale}
+
+Datele pentru determinarea momentului de revenire, respectiv valoarea acestuia s-au trecut în următorul tabel:
+\begin{table}[h!]
+\centering
+\label{tab:revenire}
+\begin{tabular}{|c|c|c|}
+\toprule
+$F_i\ \mathrm{(N)}$ & $\langle F \rangle\ \mathrm{(N)}$ & $D\ \mathrm{(N \cdot m/rad)}$ \\
+\midrule
+0{,}75 & \multirow{10}{*}{0{,}7730} & \multirow{10}{*}{0{,}02461} \\
+0{,}76 & & \\
+0{,}77 & & \\
+0{,}78 & & \\
+0{,}78 & & \\
+0{,}80 & & \\
+0{,}77 & & \\
+0{,}80 & & \\
+0{,}75 & & \\
+0{,}77 & & \\
+\bottomrule
+\end{tabular}
+\caption{Datele primei etape}
+\end{table}
+
+\indent Momentele de inerție s-au trecut în tabelul 2:
+
+\begin{table}[h!]
+\centering
+\label{tab:inertie}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lcccccc}
+\toprule
+Configurație & $t_i\ \mathrm{(s)}$ & $T_i\ \mathrm{(s)}$ & $\langle T \rangle\ \mathrm{(s)}$ & $J\ \mathrm{(kg\cdot m^2)}$ & $J_c\ \mathrm{(kg\cdot m^2)}$ \\
+\midrule
+\multirow{3}{*}{Tijă ($r = 0$)}
+  & 12{,}80 & 2{,}560 & \multirow{3}{*}{2{,}487} & \multirow{3}{*}{$3{,}854\times10^{-3}$} & \multirow{3}{*}{—} \\
+  & 13{,}32 & 2{,}664 & & & \\
+  & 11{,}20 & 2{,}240 & & & \\
+\midrule
+\multirow{3}{*}{$r = 0{,}05\ \mathrm{m}$}
+  & 15{,}01 & 3{,}002 & \multirow{3}{*}{3{,}010} & \multirow{3}{*}{$5{,}647\times10^{-3}$} & \multirow{3}{*}{$8{,}963\times10^{-4}$} \\
+  & 14{,}76 & 2{,}952 & & & \\
+  & 15{,}42 & 3{,}084 & & & \\
+\midrule
+\multirow{3}{*}{$r = 0{,}10\ \mathrm{m}$}
+  & 17{,}87 & 3{,}574 & \multirow{3}{*}{3{,}773} & \multirow{3}{*}{$8{,}874\times10^{-3}$} & \multirow{3}{*}{$2{,}510\times10^{-3}$} \\
+  & 19{,}68 & 3{,}936 & & & \\
+  & 19{,}03 & 3{,}806 & & & \\
+\midrule
+\multirow{3}{*}{$r = 0{,}15\ \mathrm{m}$}
+  & 25{,}49 & 5{,}098 & \multirow{3}{*}{5{,}027} & \multirow{3}{*}{$1{,}575\times10^{-2}$} & \multirow{3}{*}{$5{,}947\times10^{-3}$} \\
+  & 24{,}89 & 4{,}978 & & & \\
+  & 25{,}12 & 5{,}024 & & & \\
+\midrule
+\multirow{3}{*}{$r = 0{,}20\ \mathrm{m}$}
+  & 31{,}35 & 6{,}270 & \multirow{3}{*}{6{,}217} & \multirow{3}{*}{$2{,}409\times10^{-2}$} & \multirow{3}{*}{$1{,}012\times10^{-2}$} \\
+  & 31{,}20 & 6{,}240 & & & \\
+  & 30{,}70 & 6{,}140 & & & \\
+\bottomrule
+\end{tabular}
+  \caption{Datele celei de-a doua etape}
+\end{table}
+\newpage
+
+\indent Prin reprezentarea dependenței $J_c(r^2)$ în matlab printr-o regresie liniară s-a determinat momentul de inerție al corpului față de axa care trece prin centrul de greutate al corpului, notat pe graficul 3 cu un pătrat negru:
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{torsiune_3.pdf}
+  \caption{Dependența $J_c(r^2)$}
+   \label{fig:l(T2)}
+\end{figure}
+
+\indent În ultima etapă a experimentului s-au obținut următoarele valori: \newline
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Nr.crt.} & \textbf{$T_i$ (s)} & \textbf{$\Theta$} \\ 
+\hline
+1  & 8 & 8 \\ 
+2  & 9 & 17\\ 
+3  & 8 & 25\\ 
+4  & 10 & 35 \\ 
+5  & 9 & 44 \\ 
+6  & 8 & 52 \\ 
+7  & 10 & 62 \\ 
+8  & 9 & 71 \\ 
+9  & 9 & 80 \\ 
+10 & 10 & 90\\ 
+\hline
+\end{tabular}
+\caption{Datele ultimei etape}
+\label{tab:date_exp}
+\end{table}
+\newpage
+Prin folosirea datelor din tabelul 3, s-a trasat graficul variației amplitudinii unghiulare $\Theta$ în funcție de numărul oscilației în matlab, ceea ce ne arată o dependență liniară, ilustrată în figura de mai jos:
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.9\textwidth]{torsiune_5.pdf}
+  \caption{Variația amplitudinii unghiulare}
+   \label{fig:l(T2)}
+\end{figure}
+
+\section{Concluzie și surse de incertitudini}
+În cadrul acestei lucrări de laborator, s-a studiat dinamica mișcării de rotație prin determinarea momentului de revenire și a momentelor de inerșie pentru o axă de torsiune. \newline
+\indent Rezultatele experimentale au confirmat validitatea legilor teoretice prezentate. Valoarea momentului de revenire al axei a fost determinat experimental ca fiin D=0.02461 Nm/rad, în timp ce momentele de inerție calculate pentru diferte configurații au evidențiat creșterea proporțională cu pătratul distanței față de axa de rotație, validând astfel teorema lui Steiner. De asemenea și graficul $J_c(r^2)$ confirmă relația teoretică prezentată în acest referat, ilustrând dependența linară dintre momentul de inerție și pătratul distanței, permițând identificarea momentului de inerție propriu al corpului: $J_0=1.98 \cdot 10^{-4}kgm^2$. Prin studierea oscilațiilor amortizate s-a demonstrat o scădere liniară a amplitudnii unghiulare în raport cu numărul oscilației pentru intervalul măsurat, indicând prezența unor forțe de frecare care disipă energia sistemului. \newline
+\indent Totuși, este de menținut faptul că, calculele obținute în mod experimental sunt afectate de către niște surse de erori firește, determinând astfel o abatere față de valorile teoretice. Această lucrare de laborator a fost în principiu afectată de surse de erori precum: erorile umane de măsură, timpul de reacție la cronometrare pentru oscilații nefiind precise, din cauze reflexelor lente, sau erori de paralaxă la citirea dinamometrului, sau al amplitudinii unghiulare pe scala gradată. De asemeanea pot există și erori instrumentale, precizia instrumentelor de măsurare fiind limitată.
+\newline
+\indent În concluzie, valorile experimentale obținute pe parcursul acestei lucrări de laborator au validat în mod satistfăcător relațiile teoretice prezentate în secțiunea de introducere teoretică. 
+\end{document}
