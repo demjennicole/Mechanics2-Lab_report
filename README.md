@@ -1,6 +1,6 @@
 # Moments of Inertia and Torsional Oscillations
  
-Lab report for Mechanics II (Babeș-Bolyai University, Physics and Computer Science), written in LaTeX. The report itself is in Romanian.
+Lab report for Mechanics II (Babeș-Bolyai University, Physics with Computer Science), written in LaTeX. The report itself is in Romanian.
  
 Title in Romanian: *Momente de inerție și oscilații de torsiune*
 Author: Nicole-Klarisza Demjen
